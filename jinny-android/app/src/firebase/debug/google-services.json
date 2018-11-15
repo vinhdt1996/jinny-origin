@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "905532314363",
+    "firebase_url": "https://prelen-jinny.firebaseio.com",
+    "project_id": "prelen-jinny",
+    "storage_bucket": "prelen-jinny.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905532314363:android:0cdc8d322456ccc5",
+        "android_client_info": {
+          "package_name": "sg.prelens.jinny.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "905532314363-oetgjjh5q67u3bbpr7fpa7mbk9odqser.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sg.prelens.jinny.debug",
+            "certificate_hash": "99239909097fcaacaa97268470b11092801af30a"
+          }
+        },
+        {
+          "client_id": "905532314363-ua74bgb58e6qm9torqjksf06dfhr6fjh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7-vyMdos1Q_HdcViPUBot7ngmKLy987w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "905532314363-ua74bgb58e6qm9torqjksf06dfhr6fjh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "905532314363-l58onckc9mkbt4a860dfinq0h8k6m8a8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "sg.vinova.prelens"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

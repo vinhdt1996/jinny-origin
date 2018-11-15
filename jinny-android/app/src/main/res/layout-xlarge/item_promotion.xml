@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivMerchant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="200dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/merchant_detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMerchantName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:fontFamily="@font/seguisb"
+        android:text="@string/default_txt"
+        android:textColor="@color/black"
+        android:textSize="@dimen/default_text_size_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivMerchant" />
+
+    <TextView
+        android:id="@+id/tvCashBackAvailable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/seguisb"
+        android:maxLines="1"
+        android:text="@string/cashback_available_item"
+        android:textColor="@color/crimson"
+        android:textSize="@dimen/default_text_size_medium"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/ivArchived"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMerchantName" />
+
+    <TextView
+        android:id="@+id/tvMerchantDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/seguisb"
+        android:text="@string/merchant_detail"
+        android:textColor="@color/outer_space"
+        android:textSize="@dimen/default_text_size_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCashBackAvailable" />
+
+    <ImageView
+        android:id="@+id/ivNew"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/new_badge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivMerchant" />
+
+    <ImageView
+        android:id="@+id/ivArchived"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="10dp"
+        android:src="@drawable/archive"
+        app:layout_constraintBottom_toTopOf="@+id/vLine"
+        app:layout_constraintEnd_toStartOf="@+id/ivStartArchived"
+        app:layout_constraintTop_toBottomOf="@+id/ivMerchant" />
+
+    <ImageView
+        android:id="@+id/ivStartArchived"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:padding="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/bg_star_selector"
+        android:background="?android:attr/selectableItemBackground"
+        app:layout_constraintBottom_toTopOf="@+id/vLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivMerchant" />
+
+    <View
+        android:id="@+id/vLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/signInToggleTint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMerchantDetail" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/snow"
+    android:elevation="30dp"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:background="@color/crimson">
+
+        <TextView
+            android:id="@+id/tvAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_large"
+            android:fontFamily="@font/segoeuib"
+            android:textColor="@color/white"
+            android:textSize="@dimen/default_text_size_medium"
+            app:layout_constraintBottom_toTopOf="@+id/tvUser"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAccount"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_large"
+            android:fontFamily="@font/segoeuib"
+            android:textColor="@color/white"
+            android:textSize="@dimen/default_text_size_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill_vertical"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/main_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/snow">
+
+            <TextView
+                android:id="@+id/tvEditProfileAndSetupJinnyAccount"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_23sdp"
+                android:background="@color/white"
+                android:drawableEnd="@drawable/next_black"
+                android:fontFamily="@font/segoeuib"
+                android:gravity="left|center"
+                android:paddingEnd="@dimen/_22sdp"
+                android:paddingStart="@dimen/_23sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/default_text_size_medium"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/main_constraint"
+                app:layout_constraintStart_toStartOf="@+id/main_constraint"
+                app:layout_constraintTop_toTopOf="@+id/main_constraint" />
+
+            <TextView
+                android:id="@+id/tvSetting"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@color/white"
+                android:drawableEnd="@drawable/next_black"
+                android:fontFamily="@font/segoeuib"
+                android:gravity="left|center"
+                android:paddingEnd="@dimen/_22sdp"
+                android:paddingStart="@dimen/_23sdp"
+                android:text="Settings"
+                android:textColor="@color/black"
+                android:textSize="@dimen/default_text_size_medium"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/main_constraint"
+                app:layout_constraintStart_toStartOf="@+id/main_constraint"
+                app:layout_constraintTop_toBottomOf="@+id/tvEditProfileAndSetupJinnyAccount" />
+
+            <TextView
+                android:id="@+id/tvFeedBack"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@color/white"
+                android:drawableEnd="@drawable/next_black"
+                android:fontFamily="@font/segoeuib"
+                android:gravity="left|center"
+                android:paddingEnd="@dimen/_22sdp"
+                android:paddingStart="@dimen/_23sdp"
+                android:text="Contact Jinny"
+                android:textColor="@color/black"
+                android:textSize="@dimen/default_text_size_medium"
+                app:layout_constraintEnd_toEndOf="@+id/main_constraint"
+                app:layout_constraintStart_toStartOf="@+id/main_constraint"
+                app:layout_constraintTop_toBottomOf="@+id/tvSetting" />
+
+            <TextView
+                android:id="@+id/tvTemp1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@color/white"
+                android:fontFamily="@font/segoeuib"
+                android:gravity="left|center"
+                android:visibility="visible"
+                android:paddingEnd="@dimen/_22sdp"
+                android:paddingStart="@dimen/_23sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/default_text_size_medium"
+                app:layout_constraintEnd_toEndOf="@+id/main_constraint"
+                app:layout_constraintStart_toStartOf="@+id/main_constraint"
+                app:layout_constraintTop_toBottomOf="@+id/tvFeedBack" />
+
+            <TextView
+                android:id="@+id/tvShareApp"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@color/white"
+                android:drawableEnd="@drawable/next_black"
+                android:fontFamily="@font/segoeuib"
+                android:gravity="left|center"
+                android:paddingEnd="@dimen/_22sdp"
+                android:paddingStart="@dimen/_23sdp"
+                android:text="Share App"
+                android:textColor="@color/black"
+                android:textSize="@dimen/default_text_size_medium"
+                app:layout_constraintEnd_toEndOf="@+id/main_constraint"
+                app:layout_constraintStart_toStartOf="@+id/main_constraint"
+                app:layout_constraintTop_toBottomOf="@+id/tvTemp1" />
+
+            <TextView
+                android:id="@+id/tvTemp"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@color/white"
+                android:fontFamily="@font/segoeuib"
+                android:gravity="left|center"
+                android:visibility="visible"
+                android:paddingEnd="@dimen/_22sdp"
+                android:paddingStart="@dimen/_23sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/default_text_size_medium"
+                app:layout_constraintEnd_toEndOf="@+id/main_constraint"
+                app:layout_constraintStart_toStartOf="@+id/main_constraint"
+                app:layout_constraintTop_toBottomOf="@+id/tvShareApp" />
+
+            <TextView
+                android:id="@+id/tvTaC"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@color/white"
+                android:drawableEnd="@drawable/next_black"
+                android:fontFamily="@font/segoeuib"
+                android:gravity="left|center"
+                android:paddingEnd="@dimen/_22sdp"
+                android:paddingStart="@dimen/_23sdp"
+                android:text="Terms and Conditions"
+                android:textColor="@color/black"
+                android:textSize="@dimen/default_text_size_medium"
+                app:layout_constraintEnd_toEndOf="@+id/main_constraint"
+                app:layout_constraintStart_toStartOf="@+id/main_constraint"
+                app:layout_constraintTop_toBottomOf="@+id/tvTemp" />
+
+            <TextView
+                android:id="@+id/tvPrivacy"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@color/white"
+                android:drawableEnd="@drawable/next_black"
+                android:fontFamily="@font/segoeuib"
+                android:gravity="left|center"
+                android:paddingEnd="@dimen/_22sdp"
+                android:paddingStart="@dimen/_23sdp"
+                android:text="Privacy Policy"
+                android:textColor="@color/black"
+                android:textSize="@dimen/default_text_size_medium"
+                app:layout_constraintEnd_toEndOf="@+id/main_constraint"
+                app:layout_constraintStart_toStartOf="@+id/main_constraint"
+                app:layout_constraintTop_toBottomOf="@+id/tvTaC" />
+
+            <TextView
+                android:id="@+id/tvLogout"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="@dimen/_90sdp"
+                android:background="@color/white"
+                android:fontFamily="@font/segoeuib"
+                android:gravity="left|center"
+                android:paddingEnd="@dimen/_22sdp"
+                android:paddingStart="@dimen/_23sdp"
+                android:text="Logout"
+                android:textColor="@color/crimson"
+                android:textSize="@dimen/default_text_size_medium"
+                app:layout_constraintEnd_toEndOf="@+id/main_constraint"
+                app:layout_constraintStart_toStartOf="@+id/main_constraint"
+                app:layout_constraintTop_toBottomOf="@+id/tvPrivacy"
+                app:layout_constraintVertical_bias="0.74" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

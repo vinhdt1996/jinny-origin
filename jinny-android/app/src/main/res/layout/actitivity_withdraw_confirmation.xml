@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/layout_toolbar_cash_back_detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        android:background="@color/snow"
+        tools:layout_editor_absoluteX="25dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium">
+
+            <TextView
+                android:id="@+id/tvAmountTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui"
+                android:gravity="start"
+                android:text="Amount to withdraw"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textSize="@dimen/default_text_size_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui"
+                android:gravity="start"
+                android:text="$10.00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/default_text_size_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAmountTitle" />
+            <TextView
+                android:id="@+id/tvHolderNameTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bank account holder name"
+                android:fontFamily="@font/segoeui"
+                android:gravity="start"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textColor="@color/black"
+                android:textSize="@dimen/default_text_size_medium"
+                app:layout_constraintTop_toBottomOf="@id/tvAmount"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/tvHolderName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textSize="@dimen/default_text_size_medium"
+                app:layout_constraintTop_toBottomOf="@id/tvHolderNameTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="John"/>
+            <TextView
+                android:id="@+id/tvBankNameTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bank Name"
+                android:fontFamily="@font/segoeui"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textSize="@dimen/default_text_size_medium"
+                android:layout_marginTop="@dimen/margin_small"
+                app:layout_constraintTop_toBottomOf="@id/tvHolderName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/tvBankName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bank account holder name"
+                android:fontFamily="@font/segoeui"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textSize="@dimen/default_text_size_medium"
+                app:layout_constraintTop_toBottomOf="@id/tvBankNameTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="OCBC"/>
+            <TextView
+                android:id="@+id/tvAccountNumberTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/last_4_digits_of_account_number"
+                android:fontFamily="@font/segoeui"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textSize="@dimen/default_text_size_medium"
+                app:layout_constraintTop_toBottomOf="@id/tvBankName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvAccountNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoeui"
+                android:gravity="start"
+                tools:text="8315"
+                android:textColor="@color/black"
+                android:textSize="@dimen/default_text_size_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAccountNumberTitle" />
+            <Button
+                android:id="@+id/btnConfirm"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_extra_large"
+                android:background="@drawable/sign_in_background_button"
+                android:elevation="0dp"
+                android:enabled="true"
+                android:fontFamily="@font/segoeui"
+                android:text="@string/confirm"
+                android:textAllCaps="false"
+                android:textColor="@color/signInTextButtonColor"
+                android:textSize="@dimen/signInButtonSize"
+                app:layout_constraintBottom_toTopOf="@id/ivSaveAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAccountNumber" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

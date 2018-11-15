@@ -1,0 +1,61 @@
+
+default_platform(:android)
+
+platform :android do
+  desc "Runs all the tests"
+  lane :test do
+    gradle(task: "test")
+    p "#{android_get_version_name}"
+  end
+
+  desc "Show all version of android "
+  lane :getversion do
+      p "Version name: #{android_get_version_name}"
+      p "Version code: #{android_get_version_code}"
+  end
+
+  desc "Submit a new Beta Build to Crashlytics Beta"
+  lane :beta do
+    p "#{ENV["BUILD_TYPE"]}"
+    gradle(   
+      task: "clean assemble",   
+      build_type: "#{ENV["BUILD_TYPE"]}",   
+      print_command: false,
+    )
+    crashlytics(
+      # keys for organization: VINOVA
+      api_token: "#{ENV["CRASHLYTICS_API_TOKEN"]}",
+      build_secret: "#{ENV["CRASHLYTICS_BUILD_SERECT"]}"
+    )
+    msg = "#{ENV["APP_NAME"]} #{android_get_version_name} has been deployed to Fabric"
+    noti_slack({message: msg})
+  end
+
+  desc "Deploy a new version to the Diawi"
+  lane :deploy_diawi do
+    gradle(   
+      task: "clean assemble",
+      build_type: "#{ENV["BUILD_TYPE"]}",   
+      print_command: false,
+    )
+    puts "APK path is: #{Actions.lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]}"
+
+    APK_PATH = "./app/build/outputs/apk/local/debug/#{ENV["APP_NAME"]}"
+    diawi(
+      file: lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]
+    )
+
+    diawiLink = lane_context[SharedValues::UPLOADED_FILE_LINK_TO_DIAWI]
+    msg = "Get new #{ENV["APP_NAME"]} #{android_get_version_name} from: #{diawiLink}"
+    noti_slack({message: msg})
+  end
+
+  desc "Noti slack channel something"
+  private_lane :noti_slack do | options |
+    msg = options[:message]
+    slack(
+      message: msg,
+      default_payloads: [:git_branch, :last_git_commit_message]
+    )  
+  end
+end

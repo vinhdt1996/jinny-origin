@@ -1,0 +1,19 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:alpha="1"
+    android:viewportHeight="2000.0"
+    android:viewportWidth="2000.0">
+    <group
+        android:translateX="500"
+        android:translateY="500">
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="
+        M 717.8,990   v-21 h250 v-245 H990 V990 H717.1 z
+        M 935.6,64.4  H717.8 V40 H990 v272.2 h-21 V64.4 z
+        M 1,525       h750 V500 H250 V525 z
+        M 64.4,64.4   v250 H40 V40 h299.4 v20 H64.4 z
+        M 64.4,970    h245 V990 H40 V725 h25 V935.6 z" />
+    </group>
+</vector>

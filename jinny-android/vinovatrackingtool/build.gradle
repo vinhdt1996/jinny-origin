@@ -1,0 +1,67 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.1"
+
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+        fabric {
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "mode"
+    productFlavors {
+        local {
+            buildConfigField "String", "SERVER_URL", "\"http://jinny.vinova.sg/\""
+            buildConfigField "String", "BASE_URL", "\"http://jinny.vinova.sg/\""
+        }
+        prod {
+            buildConfigField "String", "SERVER_URL", "\"https://app.myjinny.com/\""
+            buildConfigField "String", "BASE_URL", "\"https://myjinny.com/\""
+        }
+    }
+
+}
+
+dependencies {
+    def work_version = "1.0.0-alpha08"
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation deps.lifecycle.runtime
+    implementation deps.lifecycle.extensions
+    implementation deps.kotlin.stdlib
+    implementation deps.retrofit.runtime
+    implementation deps.retrofit.gson
+    implementation deps.okhttp_logging_interceptor
+    implementation deps.worker_runtime
+    implementation deps.room.runtime
+    kapt deps.room.compiler
+    debugImplementation 'com.github.whataa:pandora:v1.1.3'
+    releaseImplementation 'com.github.whataa:pandora-no-op:v1.1.0'
+    fabricImplementation 'com.github.whataa:pandora-no-op:v1.1.0'
+    api project(':roomdbAnalytics')
+
+}
+repositories {
+    mavenCentral()
+}

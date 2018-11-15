@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ctlSignUpGuest"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include
+        android:id="@+id/lnToolbar"
+        layout="@layout/layout_toolbar_detail_normal" />
+
+    <TextView
+        android:id="@+id/tvEmailGuest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_42sdp"
+        android:layout_marginTop="@dimen/_23sdp"
+        android:fontFamily="@font/segoeuib"
+        android:text="@string/email"
+        android:textColor="@color/outer_space"
+        android:textSize="@dimen/default_text_size_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lnToolbar" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tilEmailGuest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_42sdp"
+        android:layout_marginStart="@dimen/_39sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/bg_shadow_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmailGuest">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/tetEmailGuest"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/segoeui"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/signInTextColor"
+            android:textSize="@dimen/default_text_size_medium" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvPassGuest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_42sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:fontFamily="@font/segoeuib"
+        android:text="@string/password"
+        android:textColor="@color/outer_space"
+        android:textSize="@dimen/default_text_size_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilEmailGuest" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tilPassGuest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_42sdp"
+        android:layout_marginStart="@dimen/_39sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:background="@drawable/bg_shadow_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPassGuest"
+        app:passwordToggleDrawable="@drawable/ic_visibility_selector"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/signInToggleTint">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/tetPassGuest"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/segoeui"
+            android:inputType="textPassword"
+            android:textColor="@color/signInTextColor"
+            android:textSize="@dimen/default_text_size_medium" />
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/ivTaCGuest"
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/margin_extra_small"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/bg_checked"
+        app:layout_constraintEnd_toStartOf="@+id/tvForgotPasswordGuest"
+        app:layout_constraintTop_toBottomOf="@+id/tilPassGuest" />
+
+    <TextView
+        android:id="@+id/tvForgotPasswordGuest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/segoeui"
+        android:text="@string/terms_and_conditions"
+        android:textColor="@color/outer_space"
+        android:textSize="@dimen/default_text_size_small_z"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilPassGuest" />
+
+    <Button
+        android:id="@+id/btnSignUpGuest"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_42sdp"
+        android:layout_marginStart="@dimen/_41sdp"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:background="@drawable/sign_in_background_button"
+        android:elevation="0dp"
+        android:enabled="true"
+        android:fontFamily="@font/segoeuib"
+        android:text="@string/sign_up"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/signInButtonSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvForgotPasswordGuest" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,21 @@
+package sg.prelens.jinny.models
+
+data class PromotionList(val id: String,
+                         val merchant_name: String?,
+                         val users_voucher_id: Int,
+                         var description: String,
+                         val expires_at: String,
+                         val is_read: Boolean,
+                         val is_bookmarked: Boolean,
+                         val image: Logo,
+                         val merchant: Merchant,
+                         val expires_at_in_words: String,
+                         val is_redeemed: Boolean,
+                         val can_cashback: Boolean,
+                         val is_archived: Boolean,
+                         val is_expired: Boolean,
+                         val is_cashbacked: Boolean,
+                         val cashback_type: String?,
+                         val cashback_amount: String?,
+                         val cashback_percent: String?,
+                         val is_feature: Boolean)

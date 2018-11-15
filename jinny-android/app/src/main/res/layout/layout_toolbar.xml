@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlToolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageButton
+        android:id="@+id/ivBack"
+        android:layout_width="@dimen/default_margin_larger_xx"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/default_margin_smallest"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/back_black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:fontFamily="@font/ostrich_sans_heavy"
+        android:text="Middle Text"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_24sdp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ibArchived"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:background="?attr/selectableItemBackground"
+        android:padding="10dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ibBookmark"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ibBookmark"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:background="?attr/selectableItemBackground"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/tvTitleWithIcon"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:visibility="gone"-->
+        <!--tools:background="@color/crimson"-->
+        <!--tools:visibility="visible">-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:paddingBottom="@dimen/margin_medium"-->
+            <!--android:scaleType="fitCenter"-->
+            <!--android:src="@drawable/splash_logo" />-->
+
+    <!--</LinearLayout>-->
+
+    <View
+        android:id="@+id/vLine"
+        style="@style/AppTheme.LineViewBold"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true" />
+
+</android.support.constraint.ConstraintLayout>

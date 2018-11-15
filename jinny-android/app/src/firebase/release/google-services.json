@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "674775548112",
+    "firebase_url": "https://jinny-305ba.firebaseio.com",
+    "project_id": "jinny-305ba",
+    "storage_bucket": "jinny-305ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:674775548112:android:0757a9a8794820a5",
+        "android_client_info": {
+          "package_name": "sg.prelens.jinny"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "674775548112-pe8vsq8t124rklq7qppllh53dmm25vh4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sg.prelens.jinny",
+            "certificate_hash": "f88c721e12e7ea7c42ebb624768680e2e0856ce5"
+          }
+        },
+        {
+          "client_id": "674775548112-7chrq8j07f3lko8arcmived302mmu6ju.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiymM5plvjffrOwnzlP2XzD5Hw_t5gua0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "674775548112-7chrq8j07f3lko8arcmived302mmu6ju.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "674775548112-bqjr618d6sgs1brsqiousefeh83sh7ua.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.prelens.jinny"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

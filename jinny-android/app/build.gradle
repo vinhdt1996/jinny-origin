@@ -1,0 +1,159 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+def debugVersionName = "1.0.75"
+def prodVersionName = "1.0.7"
+def appVersionName = "1.0.7"
+def appPackageName = "sg.prelens.jinny"
+
+android {
+    dexOptions {
+        jumboMode true
+    }
+    compileSdkVersion build_versions.target_sdk
+    buildToolsVersion build_versions.build_tools
+
+    defaultConfig {
+        applicationId appPackageName
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 92
+        versionName appVersionName
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        debug {
+            storeFile file('../Jinny_Keystore.jks')
+            storePassword "vinova123"
+            keyAlias "vinova-jinny-dev"
+            keyPassword "vinova123"
+        }
+    }
+
+
+    repositories {
+        mavenCentral()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    buildTypes {
+        debug {
+            resValue "string", "app_name", "@string/app_name_debug"
+            applicationIdSuffix '.debug'
+            versionNameSuffix '-DEBUG'
+            ext.enableCrashlytics = false
+            signingConfig signingConfigs.debug
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+        }
+        fabric {
+            resValue "string", "app_name", "@string/app_name_release"
+            versionNameSuffix '-UAT'
+            ext.enableCrashlytics = true
+            signingConfig signingConfigs.debug
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+        }
+        release {
+            resValue "string", "app_name", "@string/app_name_release"
+            ext.enableCrashlytics = true
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+    sourceSets {
+        androidTest.java.srcDirs += "src/test-common/java"
+        test.java.srcDirs += "src/test-common/java"
+    }
+    flavorDimensions "mode"
+    productFlavors {
+        local {
+            applicationId "${appPackageName}"
+            versionName debugVersionName
+            buildConfigField "String", "SERVER_URL", "\"http://jinny.vinova.sg/\""
+            buildConfigField "String", "BASE_URL", "\"http://jinny.vinova.sg/\""
+        }
+        prod {
+            applicationId appPackageName
+            versionName prodVersionName
+            buildConfigField "String", "SERVER_URL", "\"http://jinny.vinova.sg/\""
+            buildConfigField "String", "BASE_URL", "\"http://jinny.vinova.sg/\""
+        }
+    }
+    configurations.all {
+        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    }
+
+}
+
+dependencies {
+    //kapt deps.room.compiler
+    implementation deps.constraint_layout
+    implementation deps.support.app_compat
+    implementation deps.support.recyclerview
+    implementation deps.support.cardview
+    implementation deps.support.design
+    implementation deps.lifecycle.runtime
+    implementation deps.lifecycle.extensions
+    //Room Database
+    implementation deps.room.runtime
+    annotationProcessor deps.room.compiler
+    //implementation deps.room.rxjava2
+    implementation deps.paging
+    implementation deps.kotlin.stdlib
+    implementation deps.retrofit.runtime
+    implementation deps.retrofit.gson
+    implementation deps.okhttp_logging_interceptor
+    implementation deps.glide
+    implementation deps.anko.common
+    implementation deps.stetho.common
+    implementation deps.stetho.okhttp
+    implementation deps.firebase.core
+    implementation deps.firebase.messaging
+    //Fabric
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.1@aar') {
+        transitive = true
+    }
+    //Zxing
+    implementation deps.zxing
+    // ConstraintLayout
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    // Android Testing Support Library's runner and rules
+    androidTestImplementation deps.atsl.runner
+    androidTestImplementation deps.atsl.rules
+    androidTestImplementation deps.arch_core.testing
+    androidTestImplementation deps.junit
+    androidTestImplementation deps.retrofit.mock
+    androidTestImplementation deps.arch_core.testing
+    androidTestImplementation deps.dexmaker
+    androidTestImplementation deps.mockito.core, { exclude group: 'net.bytebuddy' }
+    testImplementation deps.junit
+    testImplementation deps.retrofit.mock
+    testImplementation deps.arch_core.testing
+    testImplementation deps.mockito.core
+    // todo refactor this as soon as possible
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    implementation 'com.github.chrisbanes.photoview:library:1.2.4'
+    debugImplementation 'com.github.whataa:pandora:v1.1.3'
+    releaseImplementation 'com.github.whataa:pandora-no-op:v1.1.0'
+    fabricImplementation 'com.github.whataa:pandora-no-op:v1.1.0'
+    // SNAPSHOT VERSION https://github.com/CameraKit/camerakit-android/pull/318
+    // added because this ticket https://vinova.unfuddle.com/a#/projects/1272/tickets/by_number/765
+    // consider replace this version in the future
+    implementation 'com.camerakit:camerakit:1.0.0-Snapshot'
+    api project(':vinovatrackingtool')
+    implementation deps.worker_runtime
+    api project(':roomdbAnalytics')
+}
+
+apply plugin: 'com.google.gms.google-services'

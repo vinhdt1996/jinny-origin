@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+ <android.support.design.widget.AppBarLayout
+     android:id="@+id/appBarLayout"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:fitsSystemWindows="true"
+     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+     <include
+         android:id="@+id/include"
+         layout="@layout/layout_toolbar_mycashback" />
+
+     <android.support.design.widget.TabLayout
+         android:id="@+id/tlPromotions"
+         style="@style/AppTheme.TabStyle.Vouchers"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@color/white"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         app:tabTextAppearance="@style/AppTheme.TabStyle.Vouchers" />
+ </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpPromotions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/snow"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right|end"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:clickable="true"
+        android:elevation="8dp"
+        android:src="@drawable/ic_plus"
+        app:backgroundTint="@color/crimson"
+        android:focusable="true" />
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivVoucher"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/promotion"
+        app:layout_constraintBottom_toTopOf="@+id/tvVoucher"
+        app:layout_constraintEnd_toEndOf="@+id/tvVoucher"
+        app:layout_constraintStart_toStartOf="@+id/tvVoucher"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tvNotificationVoucher"
+        android:layout_width="@dimen/dot_size"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@+id/ivVoucher"
+        android:background="@drawable/bg_badge_footer"
+        android:gravity="center"
+        android:minWidth="@dimen/default_padding"
+        android:textColor="@color/white"
+        android:textSize="@dimen/default_text_size_small"
+        android:visibility="gone"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toEndOf="@+id/ivVoucher"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="6"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvVoucher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivMemberships"
+        android:layout_marginBottom="1dp"
+        android:gravity="center"
+        android:text="@string/promotions"
+        android:textAlignment="center"
+        android:textColor="@drawable/tab_selector"
+        android:textSize="@dimen/default_text_size_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivVoucher"/>
+</android.support.constraint.ConstraintLayout>

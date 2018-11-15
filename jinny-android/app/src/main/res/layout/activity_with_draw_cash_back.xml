@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_constraint"
+    tools:context=".features.withdrawcashback.WithDrawCashBackActivity">
+
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/layout_toolbar_cash_back_detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/vLineWithDrawCashBack1"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:alpha="0.2"
+        android:background="@color/gray_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ctlContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vLineWithDrawCashBack1">
+
+        <TextView
+            android:id="@+id/tvDescriptionWithDrawCashBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/amount_to_withdraw_min_10"
+            android:textColor="@color/dim_gray"
+            android:textSize="15sp"
+            android:fontFamily="@font/segoeui"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/dummy"
+            android:layout_width="0.0dp"
+            android:layout_height="0.1dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <sg.prelens.jinny.widget.CustomEditTextPrefix
+            android:id="@+id/edtAmountWithDrawCashBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_shadow_border"
+            android:padding="@dimen/_10sdp"
+            android:tag="$"
+            android:text="@string/usd_10_00"
+            android:fontFamily="@font/segoeui"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescriptionWithDrawCashBack" />
+
+        <Button
+            android:id="@+id/btnContinueWithDrawCrashBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_badge_footer"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/Continue"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:fontFamily="@font/segoeui"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtAmountWithDrawCashBack" />
+
+        <View
+            android:id="@+id/vLineWithDrawCashBack2"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:alpha="0.25"
+            android:background="@color/gray_hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnContinueWithDrawCrashBack" />
+
+        <View
+            android:id="@+id/vEditBankAccountWDCashBack"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vLineWithDrawCashBack2" />
+
+        <android.support.constraint.Group
+            android:id="@+id/gEditBankAccountWDCashBack"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:background="@color/colorPrimary"
+            app:constraint_referenced_ids="ivNextWithDrawCashBack,tvEditBankAccountWDCashBack, vEditBankAccountWDCashBack"
+            app:layout_constraintBottom_toTopOf="@+id/vEditBankAccountWDCashBack"
+            app:layout_constraintEnd_toEndOf="@+id/vEditBankAccountWDCashBack"
+            app:layout_constraintStart_toStartOf="@+id/vEditBankAccountWDCashBack"
+            app:layout_constraintTop_toBottomOf="@+id/vEditBankAccountWDCashBack" />
+
+        <TextView
+            android:id="@+id/tvEditBankAccountWDCashBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/edit_bank_account"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:fontFamily="@font/segoeui"
+            app:layout_constraintBottom_toBottomOf="@+id/vEditBankAccountWDCashBack"
+            app:layout_constraintStart_toStartOf="@+id/vEditBankAccountWDCashBack"
+            app:layout_constraintTop_toTopOf="@+id/vEditBankAccountWDCashBack" />
+
+        <ImageView
+            android:id="@+id/ivNextWithDrawCashBack"
+            android:layout_width="29dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="4dp"
+            android:contentDescription="@null"
+            android:padding="10dp"
+            android:src="@drawable/next_black"
+            app:layout_constraintBottom_toBottomOf="@+id/vEditBankAccountWDCashBack"
+            app:layout_constraintEnd_toEndOf="@+id/vEditBankAccountWDCashBack"
+            app:layout_constraintTop_toTopOf="@+id/vEditBankAccountWDCashBack" />
+
+        <View
+            android:id="@+id/vRemoveBankAccountWDCashBack"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vEditBankAccountWDCashBack" />
+
+        <TextView
+            android:id="@+id/tvRemoveBankAccountWDCashBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/remove_bank_account"
+            android:textColor="@color/text_font"
+            android:textSize="15sp"
+            android:fontFamily="@font/segoeui"
+            app:layout_constraintBottom_toBottomOf="@+id/vRemoveBankAccountWDCashBack"
+            app:layout_constraintStart_toStartOf="@+id/vRemoveBankAccountWDCashBack"
+            app:layout_constraintTop_toTopOf="@+id/vRemoveBankAccountWDCashBack" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

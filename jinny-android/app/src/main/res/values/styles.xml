@@ -1,0 +1,110 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/lust</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:configChanges">keyboardHidden|orientation|screenSize</item>
+    </style>
+
+    <style name="AppTheme.SplashScreen" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/logo_background</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="AppTheme.SplashScreen.Base" parent="AppTheme.SplashScreen" />
+
+    <style name="AppTheme.Base" parent="AppTheme" />
+
+    <!-- Line View -->
+    <style name="AppTheme.LineView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/black</item>
+        <item name="android:alpha">0.1</item>
+    </style>
+
+    <style name="AppTheme.LineViewBold">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/black</item>
+        <item name="android:alpha">0.1</item>
+    </style>
+
+    <style name="Switch.Theme" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/neon_green</item>
+        <item name="colorSwitchThumbNormal">#F1F1F1</item>
+        <item name="android:colorForeground">@color/trolley_grey</item>
+    </style>
+
+    <style name="AppSearchView" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="AppTheme.TabStyle.Aut" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/AppTheme.TextStyle.Aut</item>
+        <item name="tabTextColor">@color/outer_space</item>
+        <item name="tabSelectedTextColor">@color/text_black</item>
+        <item name="tabIndicatorColor">@color/text_black</item>
+    </style>
+
+    <style name="AppTheme.TabStyle.Vouchers" parent="Widget.Design.TabLayout">
+        <!--<item name="tabTextAppearance">@style/AppTheme.TextStyle.Vouchers</item>-->
+        <item name="android:fontFamily">@font/seguisb</item>
+        <item name="android:textSize">13sp</item>
+        <item name="tabTextColor">@color/signInToggleTint</item>
+        <item name="tabSelectedTextColor">@color/text_black</item>
+        <item name="tabIndicatorColor">@color/text_black</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="AppTheme.TextStyle.Aut" parent="TextAppearance.Design.Tab">
+        <item name="android:fontFamily">@font/ostrich_sans_black</item>
+        <item name="android:textSize">17.5sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AppTheme.TextStyle.Vouchers" parent="TextAppearance.Design.Tab">
+        <item name="android:fontFamily">@font/seguisb</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="AppTheme.Spinner" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/crimson</item>
+        <item name="android:fontFamily">@font/segoeui</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="AppTheme.TabStyle.Cashback" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="CustomTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:textSelectHandleLeft">@drawable/zero_px_transparent</item>
+        <item name="android:textSelectHandleRight">@drawable/zero_px_transparent</item>
+        <item name="android:textSelectHandle">@drawable/zero_px_transparent</item>
+    </style>
+    <!--<style name="AppTheme.DatePickerDialogTheme" parent="@android:style/Theme_Holo_Dialog">-->
+    <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+    <!--<item name="colorPrimaryDark">@color/lust</item>-->
+    <!--<item name="colorAccent">@color/lust</item>-->
+    <!--</style>-->
+    <!--<style name="AppTheme.DatePickerDialogTheme21" parent="@android:style/Theme_Holo_Light">-->
+    <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+    <!--<item name="colorPrimaryDark">@color/lust</item>-->
+    <!--<item name="colorAccent">@color/lust</item>-->
+    <!--</style>-->
+
+    <style name="CustomTabTitleCashBack" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">@font/seguisb</item>
+        <item name="android:textColor">@color/signInTextColor</item>
+    </style>
+</resources>

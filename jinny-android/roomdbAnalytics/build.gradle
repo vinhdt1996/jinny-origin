@@ -1,0 +1,63 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+
+
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+        fabric {
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "mode"
+    productFlavors {
+        local {
+            buildConfigField "String", "SERVER_URL", "\"http://jinny.vinova.sg/\""
+            buildConfigField "String", "BASE_URL", "\"http://jinny.vinova.sg/\""
+        }
+        prod {
+            buildConfigField "String", "SERVER_URL", "\"https://app.myjinny.com/\""
+            buildConfigField "String", "BASE_URL", "\"https://myjinny.com/\""
+        }
+    }
+
+}
+
+dependencies {
+    def work_version = "1.0.0-alpha08"
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation deps.support.app_compat
+    implementation deps.lifecycle.runtime
+    implementation deps.lifecycle.extensions
+    implementation deps.room.runtime
+    kapt deps.room.compiler
+    annotationProcessor deps.room.compiler
+
+    implementation deps.kotlin.stdlib
+
+}
+repositories {
+    mavenCentral()
+}

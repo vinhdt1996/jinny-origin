@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvSearchVoucher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0.1dp"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/dummy"
+            android:layout_width="0dp"
+            android:layout_height="0.1dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal" />
+
+        <!--<android.support.v7.widget.SearchView-->
+        <!--android:id="@+id/svVoucher"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:focusable="false"-->
+        <!--android:focusableInTouchMode="false"-->
+        <!--android:queryBackground="@color/white"-->
+        <!--app:defaultQueryHint="@string/search_voucher_hint"-->
+        <!--app:iconifiedByDefault="false"-->
+        <!--app:queryBackground="@android:color/transparent"-->
+        <!--app:theme="@style/AppSearchView" />-->
+        <include
+            android:id="@+id/svVoucher"
+            layout="@layout/layout_search_view" />
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvSortBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/segoeui"
+        android:text="@string/sort_by"
+        android:textColor="@color/outer_space"
+        android:textSize="@dimen/default_text_size_medium"
+        app:layout_constraintEnd_toStartOf="@+id/spSortByPromotion"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/tvVoucher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvSearchVoucher" />
+
+    <Spinner
+        android:id="@+id/spSortByPromotion"
+        style="@style/AppTheme.Spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:dropDownWidth="wrap_content"
+        android:padding="0dp"
+        android:paddingEnd="0dp"
+        android:paddingStart="0dp"
+        android:spinnerMode="dropdown"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSortBy"
+        app:layout_constraintEnd_toStartOf="@+id/ivDropdown"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvSortBy"
+        app:layout_constraintTop_toTopOf="@+id/tvSortBy" />
+
+    <ImageView
+        android:id="@+id/ivDropdown"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginEnd="12dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSortBy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/spSortByPromotion"
+        app:layout_constraintTop_toTopOf="@+id/tvSortBy" />
+
+    <TextView
+        android:id="@+id/tvVoucher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:fontFamily="@font/seguisb"
+        android:text="@string/title_voucher"
+        android:textColor="@color/signInTextColor"
+        android:textSize="@dimen/default_text_size_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvSearchVoucher" />
+
+    <TextView
+        android:id="@+id/tvVoucherDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:ellipsize="end"
+        android:fontFamily="@font/segoeui"
+        android:maxLines="2"
+        android:text="@string/empty_voucher_msg"
+        android:textSize="@dimen/default_text_size_medium"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvVoucher" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/main_purchase"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/lnToolbar"
+            layout="@layout/layout_toolbar" />
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_0sdp"
+            android:layout_marginStart="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:fontFamily="@font/segoeui"
+            android:gravity="left"
+            android:text="Type"
+            android:textColor="@color/outer_space"
+            android:textSize="@dimen/default_text_size_medium"
+            app:layout_constraintEnd_toEndOf="@+id/main_purchase"
+            app:layout_constraintStart_toStartOf="@+id/main_purchase"
+            app:layout_constraintTop_toBottomOf="@+id/lnToolbar" />
+
+        <TextView
+            android:id="@+id/tvTypeVoucher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_0sdp"
+            android:layout_marginStart="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/segoeui"
+            android:gravity="left"
+            android:text="Voucher Purchase"
+            android:textColor="@color/black"
+            android:textSize="@dimen/default_text_size_medium"
+            app:layout_constraintEnd_toEndOf="@+id/main_purchase"
+            app:layout_constraintStart_toStartOf="@+id/main_purchase"
+            app:layout_constraintTop_toBottomOf="@+id/tvType" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_0sdp"
+            android:layout_marginStart="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:fontFamily="@font/segoeui"
+            android:gravity="left"
+            android:text="Type"
+            android:textColor="@color/outer_space"
+            android:textSize="@dimen/default_text_size_medium"
+            app:layout_constraintEnd_toEndOf="@+id/main_purchase"
+            app:layout_constraintStart_toStartOf="@+id/main_purchase"
+            app:layout_constraintTop_toBottomOf="@+id/tvTypeVoucher" />
+
+        <TextView
+            android:id="@+id/tvDescriptionVoucher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_0sdp"
+            android:layout_marginStart="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/segoeui"
+            android:gravity="left"
+            android:text="Voucher Purchase"
+            android:textColor="@color/black"
+            android:textSize="@dimen/default_text_size_medium"
+            app:layout_constraintEnd_toEndOf="@+id/main_purchase"
+            app:layout_constraintStart_toStartOf="@+id/main_purchase"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+
+
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_0sdp"
+            android:layout_marginStart="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:fontFamily="@font/segoeui"
+            android:gravity="left"
+            android:text="Type"
+            android:textColor="@color/outer_space"
+            android:textSize="@dimen/default_text_size_medium"
+            app:layout_constraintEnd_toEndOf="@+id/main_purchase"
+            app:layout_constraintStart_toStartOf="@+id/main_purchase"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescriptionVoucher" />
+
+        <TextView
+            android:id="@+id/tvAmountVoucher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_0sdp"
+            android:layout_marginStart="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/segoeui"
+            android:gravity="left"
+            android:text="Voucher Purchase"
+            android:textColor="@color/black"
+            android:textSize="@dimen/default_text_size_medium"
+            app:layout_constraintEnd_toEndOf="@+id/main_purchase"
+            app:layout_constraintStart_toStartOf="@+id/main_purchase"
+            app:layout_constraintTop_toBottomOf="@+id/tvAmount" />
+
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_0sdp"
+            android:layout_marginStart="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:fontFamily="@font/segoeui"
+            android:gravity="left"
+            android:text="Type"
+            android:textColor="@color/outer_space"
+            android:textSize="@dimen/default_text_size_medium"
+            app:layout_constraintEnd_toEndOf="@+id/main_purchase"
+            app:layout_constraintStart_toStartOf="@+id/main_purchase"
+            app:layout_constraintTop_toBottomOf="@+id/tvAmountVoucher" />
+
+        <TextView
+            android:id="@+id/tvDateVoucher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_0sdp"
+            android:layout_marginStart="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/segoeui"
+            android:gravity="left"
+            android:text="Voucher Purchase"
+            android:textColor="@color/black"
+            android:textSize="@dimen/default_text_size_medium"
+            app:layout_constraintEnd_toEndOf="@+id/main_purchase"
+            app:layout_constraintStart_toStartOf="@+id/main_purchase"
+            app:layout_constraintTop_toBottomOf="@+id/tvDate" />
+
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_0sdp"
+            android:layout_marginStart="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:fontFamily="@font/segoeui"
+            android:gravity="left"
+            android:text="Type"
+            android:textColor="@color/outer_space"
+            android:textSize="@dimen/default_text_size_medium"
+            app:layout_constraintEnd_toEndOf="@+id/main_purchase"
+            app:layout_constraintStart_toStartOf="@+id/main_purchase"
+            app:layout_constraintTop_toBottomOf="@+id/tvDateVoucher" />
+
+        <TextView
+            android:id="@+id/tvStatusVoucher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_0sdp"
+            android:layout_marginStart="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/segoeui"
+            android:gravity="left"
+            android:text="Voucher Purchase"
+            android:textColor="@color/black"
+            android:textSize="@dimen/default_text_size_medium"
+            app:layout_constraintEnd_toEndOf="@+id/main_purchase"
+            app:layout_constraintStart_toStartOf="@+id/main_purchase"
+            app:layout_constraintTop_toBottomOf="@+id/tvStatus" />
+
+        <TextView
+            android:id="@+id/tvReject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_0sdp"
+            android:layout_marginStart="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:fontFamily="@font/segoeui"
+            android:gravity="left"
+            android:text="Type"
+            android:textColor="@color/outer_space"
+            android:textSize="@dimen/default_text_size_medium"
+            app:layout_constraintEnd_toEndOf="@+id/main_purchase"
+            app:layout_constraintStart_toStartOf="@+id/main_purchase"
+            app:layout_constraintTop_toBottomOf="@+id/tvStatusVoucher" />
+
+        <TextView
+            android:id="@+id/tvRejectVoucher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_0sdp"
+            android:layout_marginStart="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/segoeui"
+            android:gravity="left"
+            android:text="Voucher Purchase"
+            android:textColor="@color/black"
+            android:textSize="@dimen/default_text_size_medium"
+            app:layout_constraintEnd_toEndOf="@+id/main_purchase"
+            app:layout_constraintStart_toStartOf="@+id/main_purchase"
+            app:layout_constraintTop_toBottomOf="@+id/tvReject" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>

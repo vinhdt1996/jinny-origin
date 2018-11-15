@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <color name="ic_launcher_background">#EE1E3A</color>
+  <color name="colorPrimary">@color/white</color>
+  <color name="colorPrimaryDark">#64BDCB</color>
+  <color name="colorAccent">#353435</color>
+  <color name="transparent">#00F2F2F3</color>
+  <color name="white">#FFFFFF</color>
+  <color name="black">#000000</color>
+  <color name="signInTextColor">#484848</color>
+  <color name="signInBackgroundButton">#FFE3120B</color>
+  <color name="signInTextButtonColor">@color/white</color>
+  <color name="signInToggleTint">#9F9E9F</color>
+  <color name="outer_space">#484848</color>
+  <color name="snow">#F9F9F9</color>
+  <color name="crimson">#E3120B</color>
+  <color name="lust">#E11E18</color>
+  <color name="background">#f2f2f4</color>
+  <color name="auth_title">#484848</color>
+  <color name="neon_green">#1FE30B</color>
+  <color name="trolley_grey">#797979</color>
+  <color name="mustard">#FFD659</color>
+  <color name="dim_gray">#6E6D69</color>
+  <color name="text_black">#010101</color>
+  <color name="slash_color">#DA0F1F</color>
+  <color name="gray_hint">#806E6D69</color>
+  <color name="pending">#E2A81E</color>
+  <color name="white_1">#ffffff</color>
+  <color name="kucrimson">#e3120b</color>
+  <color name="neongreen">#1fe30b</color>
+  <color name="urobilin">#e2a81e</color>
+  <color name="munsell">#f1f1f1</color>
+  <color name="snow_1">#f9f9f9</color>
+  <color name="lust_1">#e11e18</color>
+  <color name="no_item_text">#66000000</color>
+  <color name="text_font">#E25151</color>
+  <color name="star_color">#E3120B</color>
+</resources>
+

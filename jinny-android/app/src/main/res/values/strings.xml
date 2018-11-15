@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="default_notification_channel_id">Jinny</string>
+    <string name="post_subtitle">Submitted by %s</string>
+    <string name="retry">Retry</string>
+    <string name="search_hint">Subreddit Name</string>
+    <string name="default_subreddit">androiddev</string>
+    <string name="db_plus_network">db + network</string>
+    <string name="network_only_by_item">network only (by item)</string>
+    <string name="network_only_by_page">network only (by page)</string>
+    <string name="action_search">Search</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="avatar">avatar</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="change">Change</string>
+    <!--font-->
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="terms_and_conditions"> I have read and agreed to the\n
+    <u>Terms and Conditions</u> and <u>Privacy Policy</u>
+  </string>
+    <string name="submit">Submit</string>
+    <string name="change_password">Change Password</string>
+    <string name="err_current_password_empty">Please input current password</string>
+    <string name="err_new_password_empty">Please input new password</string>
+    <!--forgot password text-->
+    <string name="text_forgot_password">Enter your email address below and \nwe'll get you back on track</string>
+    <string name="forgot_password_main">Forgot Password</string>
+    <string name="email_empty_error_msg">Please input Email</string>
+    <string name="password_empty_error_msg">Please input Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="email_error_msg">Invalid Email</string>
+    <string name="password_error_msg">Invalid Password</string>
+    <string name="starred">Starred</string>
+    <string name="others">Others</string>
+    <string name="search_membership_hint">Search membership</string>
+    <string name="search_voucher_hint">Search deals by merchants</string>
+    <string name="search_merchant_hint">Search merchant</string>
+    <string name="empty_starred_msg">to keep your frequently used membership here</string>
+    <string name="empty_other_msg">Tap + to add memberships</string>
+    <string name="empty_other_msg_title">Others</string>
+    <string name="err_email_empty">Please input email</string>
+    <string name="err_email_invalid">Please input a valid email address</string>
+    <string name="err_password_invalid">Please input a valid password</string>
+    <string name="err_password_empty">Please input password</string>
+    <string name="err_term_unchecked">Please agree to the terms and conditions</string>
+    <string name="sort_by">Sort by</string>
+    <string name="empty_voucher_msg">You have no deals yet, wait for promotion to come :)</string>
+    <string name="title_voucher">%1$s Deals</string>
+    <string name="expiry_date">Valid Till: %1$s</string>
+    <string name="add_membership_upper">ADD MEMBERSHIP</string>
+    <string name="app_title">JINNY</string>
+    <string name="promotions_detail_title_text">San(3)Tou(10)ka Day - $3++ Ramen for everyone!</string>
+    <string name="promotions_detail_expire_text">Expire date: 26 March 2018</string>
+    <string name="remove_voucher">Remove Deal</string>
+    <string name="remove_voucher_success">Remove deal successfully</string>
+    <string name="redeem">Redeem</string>
+    <string name="redeem_promo">Promo Code</string>
+    <string name="select">Select</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string-array name="sorting_item_array_membership">
+        <item>Most Recently Added</item>
+        <item>Alphabetic Order</item>
+    </string-array>
+    <string-array name="sorting_item_array_deal">
+        <item>Most Recent</item>
+        <item>Expiry Date</item>
+    </string-array>
+    <!--eidt profile-->
+    <string name="text_edit_profile">Fill in your profile to receive birthday \nmonth specials and promotions \ncustomized for you!</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="gender">Gender</string>
+    <string name="residential_region">Residential Region</string>
+    <string name="name">Name</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="settings">Settings</string>
+    <string name="all">All</string>
+    <string name="archived">Archived</string>
+    <string name="merchant_detail">%s %s</string>
+    <string name="str_new">NEW</string>
+    <string name="default_txt">%s</string>
+    <string name="related_promotions">Related promotions</string>
+    <string name="remove_membership">Remove membership</string>
+    <string name="serial_number">Serial number</string>
+    <string name="done">Done</string>
+    <string name="membership_added">Membership added!</string>
+    <string name="voucher_added">Deal added!</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="working_time">%s - %s</string>
+    <string name="opening_hours">Opening hours</string>
+    <string name="more">More...</string>
+    <string name="promotions">Deals</string>
+    <string name="memberships">Memberships</string>
+    <string name="save">Save</string>
+    <string name="err_name_profile_empty">Please input name user</string>
+    <string name="err_email_profile_empty">Please input email</string>
+    <string name="err_date_profile_empty">Please input date of birth</string>
+    <string name="success_update_profile">Update Profile Success</string>
+    <string name="error_update_profile">Update Profile Error</string>
+    <string name="search_merchant">Search merchant</string>
+    <string name="add_voucher">ADD DEAL</string>
+    <string name="click_to_redeem">
+    <b>Click to redeem</b>
+    \n Note: for
+    <b>merchants</b>
+    only \n unless otherwise stated
+  </string>
+    <string name="do_you_want_to_redeem">Please ensure merchant has recorded Promo Code</string>
+    <string name="do_you_want_to_remove">Do you want to remove this deal?</string>
+    <string name="do_you_want_to_get_notification">Do you want to receive notification for voucher ?</string>
+    <string name="days_to_remind">Days to remind before expiring</string>
+    <string name="version">Jinny v</string>
+    <string name="no_barcode_add_manually">No barcode? Add manually</string>
+    <string name="get_cashback_submit_receipt">Submit Receipt &#38; Get Cashback!</string>
+    <string name="request_for_cashback">Take a photo of your receipt to request for cashback</string>
+    <string name="select_from_album">Select from album</string>
+    <string name="request_permission">Camera permission is required.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="intro_message"><![CDATA[This sample demonstrates the basic use of Camera2 API. Check the source code to see how
+            you can display camera preview and take pictures.]]></string>
+    <string name="bank_account_holder_name">Bank Account Holder Name</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="bank_account_number">Bank Account Number / PayNow ID</string>
+    <string name="ask_address_for_physical_voucher">This is a physical voucher. \n Where should i send this to?</string>
+    <string name="street_name">Street name</string>
+    <string name="save_address_for_future_use">Save address for future use</string>
+    <string name="floor_and_unit">Floor and Unit</string>
+    <string name="postal_code">Postal code</string>
+    <string name="confirm">Confirm</string>
+    <string name="take_again">Take again</string>
+    <string name="submit_receipt">Submit receipt</string>
+    <string name="with_drawal">Withdrawal History</string>
+    <string name="cash_back">Cashback Activity</string>
+    <string name="purchases">Vouchers Purchased</string>
+    <string name="cash_back_detail">CashBack Voucher</string>
+    <string name="cash_back_detail_new">CashBack Detail</string>
+    <string name="purchase_detail">Purchase Detail</string>
+    <string name="text_my_cash_back">Redeem your vouchers with Jinny\n and get back cash!</string>
+    <string name="text_redeem_cash_back">Withdraw cashback amount to your bank</string>
+    <string name="send_us_feedback">Contact Jinny</string>
+    <string name="send_feedback_top_title">or contact us at hello@myjinny.com</string>
+    <string name="skip_signup">skip signup for now</string>
+    <string name="cash_back_title">Cashback</string>
+    <string name="withdraw_cashback">Withdraw cashback</string>
+    <string name="amount_to_withdraw_min_10">Amount to withdraw (min. $10)</string>
+    <string name="usd_10_00">10.00</string>
+    <string name="Continue">Continue</string>
+    <string name="edit_bank_account">Edit bank account</string>
+    <string name="remove_bank_account">Remove bank account</string>
+    <string name="msg_guest_exit">Warning!\nAs you have not set up a Jinny account, all your data (including cashback) will be deleted and unrecoverable once you log out.\nDo you want to proceed? </string>
+    <string name="setup_jinny_account">Setup Jinny Account</string>
+    <string name="cashback_available">Cashback\nAvailable</string>
+    <string name="cashback_available_item">Cashback Available!</string>
+    <string name="pending_verification">Pending\nVerification</string>
+    <string name="accumulated">Accumulated\nEarnings</string>
+    <string name="redeem_cashback">Redeem Cashback</string>
+    <string name="empty_amount">$0.00</string>
+    <string name="rejected">Rejected</string>
+    <string name="cashback_request">Cashback Request</string>
+    <string name="add_new_bank_account">Add new bank account</string>
+    <string name="or_purchase_cash_vouchers_below">or purchase cash vouchers below</string>
+    <string name="withdraw_cashback_amount_to_your_bank">Withdraw cashback amount to your bank</string>
+    <string name="purchase">Purchase</string>
+    <string name="add_bank_account">ADD BANK ACCOUNT</string>
+    <string name="with_draw_cash_back">WITHDRAW CASHBACK</string>
+    <string name="with_draw_confirmaton">WITHDRAW CONFIRMATION</string>
+    <string name="back_to_my_vouchers">Back to My Deals</string>
+    <string name="do_you_want_to_remove_bank_account">Do you want to remove this bank account?</string>
+    <string name="notify_withdraw_cashback">Cashback value need to be greater than or equal to $10</string>
+    <string name="notify_withdraw_cashback_missing">Please input the amount to withdraw</string>
+    <string name="notify_withdraw_cashback_invalid">Amount is not a number</string>
+    <string name="cashback_info">HOW TO EARN CASHBACK</string>
+    <string name="add_membership_info">HOW TO ADD MEMBERSHIP</string>
+    <string name="mailing_description">This is a physical voucher.
+                                    Where should I send this to?</string>
+    <string name="no_activity_of_history">No activity of history</string>
+    <string name="cash_back_request">CASHBACK REQUEST</string>
+    <string name="setup_account_success">Setup account success</string>
+    <string name="cashback_available_s">cashback available!</string>
+    <string name="confirm_mailling_address">
+    Purchase \n
+    <font color="red">%s</font>
+    \n
+    for $%s
+  </string>
+    <string name="no">No</string>
+    <string name="mailling_address">MAILING ADDRESS</string>
+    <string name="view_my_voucher">View My Deal</string>
+    <string name="return_to_my_cashback">Return to My Cashback</string>
+    <string name="account">Account</string>
+    <string name="cashback_detail">CASHBACK</string>
+    <string name="discover">Discover</string>
+    <string name="redeemed">Redeemed</string>
+    <string name="privacy">JINNY PRIVACY POLICY</string>
+    <string name="terms">JINNY GENERAL TERMS OF USE</string>
+    <string name="dd_mm_yy">dd/mm/yy</string>
+    <string name="mm_yy">mm/yy</string>
+    <string name="last_4_digits_of_account_number">Last 4 digits of account number / PayNow ID</string>
+    <string name="subject">Subject</string>
+    <string name="tvTopProfile">Fill in your profile to receive birthday\nmonth specials and promotions\ncustomized for you!</string>
+    <string name="yes">Yes</string>
+    <string name="message_cashback_history">You have not made any cashback transactions yet. \n Grab a deal and submit your receipt to earn cashback!</string>
+    <string name="message_voucher_history">You have not purchased any vouchers yet. \n Redeem your cashback by purchasing our cash vouchers!</string>
+    <string name="message_withdraw_history">You have not made any withdrawals yet. \n Accumulate a minimum of $10 cashback and make a withdrawal!</string>
+    <string name="message_archived">and expired deals will  appear here</string>
+    <string name="message_starred">Give a <p>"  "</p>to deals in the Discover tab \n and they will appear here!</string>
+    <string name="message_discover">More new deals are on the way!</string>
+    <string name="message_redeemed">Your redeemed deals will appear here</string>
+
+    <string name="request_timeout">Request timed out!\nPlease check your internet connection\nand try again later</string>
+    <string name="not_internet">Please check your internet connection or try again later</string>
+    <string name="app_name_release">Jinny</string>
+    <string name="app_name_debug">Jinny Debug</string>
+    <string name="how_to_add_membership">How To Add Membership</string>
+    <string name="subway">Subway</string>
+    <string name="resubmit">Resubmit</string>
+    <string name="text_resubmit">Resubmit</string>
+    <string name="let_s_go">Let\'s Go!</string>
+    <string name="share_this_deal">Share this deal</string>
+    <string name="featured_deals">Featured Deals</string>
+    <string name="rejected_description">Rejected Description</string>
+
+
+    <!--Analytic-->
+    <string name="membership_info">"Merchant_Name: %s , Code: %s , Membership_ID: %s"</string>
+    <string name="membership_add_info">"Merchant_Name: %s, Merchant_ID: %s"</string>
+    <string name="search_keyword">"Search_Key_Word: %s"</string>
+    <string name="deal_info">"Deal_Name: %s, Deal_ID: %s"</string>
+    <string name="reward_voucher_info">"Deal_Name: %s , Deal_ID: %s"</string>
+    <!--End Analytic-->
+
+  <string name="submit_receipt_button">Submit Receipt</string>
+</resources>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/layout_toolbar_main" />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srlMembership"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nsvMembership"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/main_constraint_membership"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/dummy"
+                    android:layout_width="0.0dp"
+                    android:layout_height="0.1dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <!--<android.support.v7.widget.SearchView-->
+                <!--android:id="@+id/svMembership"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:focusable="false"-->
+                <!--android:layout_marginTop="@dimen/margin_extra_small"-->
+                <!--android:focusableInTouchMode="false"-->
+                <!--android:queryBackground="@color/white"-->
+                <!--app:defaultQueryHint="@string/search_membership_hint"-->
+                <!--app:iconifiedByDefault="false"-->
+                <!--app:layout_constraintTop_toTopOf="parent"-->
+                <!--app:queryBackground="@android:color/transparent"-->
+                <!--app:theme="@style/CustomTheme" />-->
+
+                <include
+                    android:id="@+id/svMembership"
+                    layout="@layout/layout_search_view" />
+
+                <View
+                    android:id="@+id/vFadeout"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:alpha="0.9"
+                    android:background="@drawable/background_fade_out"
+                    app:layout_constraintTop_toBottomOf="@+id/svMembership" />
+
+                <TextView
+                    android:id="@+id/tvStarred"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:drawableEnd="@drawable/ic_star"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:fontFamily="@font/seguisb"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="@string/starred"
+                    android:textColor="@color/outer_space"
+                    android:textSize="@dimen/default_text_size_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vFadeout" />
+
+                <TextView
+                    android:id="@+id/tvStarredDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:fontFamily="@font/segoeui"
+                    android:text="@string/empty_starred_msg"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvStarred" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvStarred"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_extra_small"
+                    android:layout_marginStart="@dimen/margin_extra_small"
+                    android:layout_marginTop="@dimen/margin_extra_small"
+                    android:nestedScrollingEnabled="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvStarredDescription" />
+
+                <View
+                    android:id="@+id/vLineLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:alpha="0.2"
+                    android:background="@color/signInToggleTint"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rvStarred" />
+
+                <TextView
+                    android:id="@+id/tvSortBy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/segoeui"
+                    android:text="@string/sort_by"
+                    android:textColor="@color/outer_space"
+                    android:textSize="@dimen/default_text_size_medium"
+                    app:layout_constraintEnd_toStartOf="@+id/spSortBy"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toEndOf="@+id/tvOtherDescription"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vLineLine" />
+
+                <Spinner
+                    android:id="@+id/spSortBy"
+                    style="@style/AppTheme.Spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@android:color/transparent"
+                    android:dropDownWidth="wrap_content"
+                    android:padding="0dp"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="0dp"
+                    android:spinnerMode="dropdown"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvSortBy"
+                    app:layout_constraintEnd_toStartOf="@+id/ivDropdown"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tvSortBy"
+                    app:layout_constraintTop_toBottomOf="@+id/vLineLine"
+                    tools:listitem="@android:layout/simple_dropdown_item_1line" />
+
+                <ImageView
+                    android:id="@+id/ivDropdown"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginEnd="12dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/dropdown"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvSortBy"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/spSortBy"
+                    app:layout_constraintTop_toTopOf="@+id/tvSortBy" />
+
+                <TextView
+                    android:id="@+id/tvOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/seguisb"
+                    android:text="@string/others"
+                    android:textColor="@color/outer_space"
+                    android:textSize="@dimen/default_text_size_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vLineLine" />
+
+                <ImageView
+                    android:id="@+id/ivMemberships"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/empty_bling"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.4"
+                    app:layout_constraintWidth_percent="0.3" />
+
+                <TextView
+                    android:id="@+id/tvOtherDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/segoeui"
+                    android:text="@string/empty_other_msg"
+                    android:textAlignment="center"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivMemberships" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvOthers"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_extra_small"
+                    android:layout_marginStart="@dimen/margin_extra_small"
+                    android:layout_marginTop="4dp"
+                    android:nestedScrollingEnabled="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvOther" />
+
+                <ViewStub
+                    android:id="@+id/retryView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inflatedId="@+id/retryViewLayout"
+                    android:layout="@layout/item_retry" />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:clickable="true"
+        android:elevation="8dp"
+        android:focusable="true"
+        android:src="@drawable/ic_plus"
+        app:backgroundTint="@color/crimson" />
+</android.support.design.widget.CoordinatorLayout>
